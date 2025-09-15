@@ -32,7 +32,7 @@ def get_interval_from_db():
 
 def main(interval_seconds):
     # Cutoff time based on DB interval
-    LOG_DIR = "\\\\172.19.0.125\\aoi\\databackup"
+    LOG_DIR = "\\\\*********\\aoi\\databackup"
     interval_seconds = get_interval_from_db()
     conn = pyodbc.connect(
         "DRIVER={SQL Server};"
@@ -122,3 +122,4 @@ if __name__ == "__main__":
         main(interval_seconds)
         print(f"[{datetime.now()}] Sleeping for {interval_seconds} seconds...")
         time.sleep(interval_seconds)
+
